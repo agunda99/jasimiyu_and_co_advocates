@@ -1688,6 +1688,16 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        background-image: none;
+        background: var(--primary)
+    }
+
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
     .hero-values {
         grid-template-columns: repeat(2, minmax(150px, 1fr));
         width: 100%;
