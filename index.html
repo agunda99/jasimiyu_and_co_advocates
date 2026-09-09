@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J. A. Simiyu &amp; Co. Advocates — Top Law Firm Kenya</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader-wrapper">
+        <div class="loader-icon"><img src="./logo.png" alt="J. A. Simiyu & Co."></div>
+        <div class="loader-text">
+            <div class="line"></div>
+            <div class="loader-text">J. A. Simiyu &amp; Co.</div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container nav">
+            <a href="#" class="logo">
+                <img src="./logo.png" alt="J. A. Simiyu & Co. Logo" />
+
+                <div class="logo-text">
+                    <p>J. A. Simiyu</p>
+                    <p> & Co. Advocates</p>
+                </div>
+                <!-- <div class="logo-text">J. A. Simiyu <span>&amp; Co.</span></div>  -->
+
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About Us</a></li>
+                <li class="nav-dropdown">
+                    <a href="#practice-areas" class="dropdown-toggle">
+                        Practice Areas <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services">Corporate &amp; Commercial</a></li>
+                        <li><a href="#services">Civil Litigation</a></li>
+                        <li><a href="#services">Criminal Defense</a></li>
+                        <li><a href="#services">Family &amp; Matrimonial</a></li>
+                        <li><a href="#services">Property &amp; Real Estate</a></li>
+                        <li><a href="#services">Employment &amp; Labour</a></li>
+                    </ul>
+                </li>
+                <li><a href="#attorneys">Attorneys</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get in Touch</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>
+                        Defend, Advice<br />
+                        Deliver<span class="highlight"> Justice</span>
+                    </h1>
+                    <p class="magazine-style">
+                        Cases are not won in court, but from a skilled advocate's office. The gavel only confirms what
+                        the desk has already decided.<br><span>Preparation is what makes the difference.</span>
+                    </p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn">Schedule a Consultation<i class="fa-solid fa-clipboard-list"></i></a>
+                    <a href="#services" class="btn btn-outline">Explore Services<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-values">
+                    <article class="hero-value">
+                        <i class="fa-solid fa-gavel"></i>
+                        <div class="hero-value-text">
+                            <h5>Experience</h5>
+                            <p>10+ years combined experience</p>
+                        </div>
+                    </article>
+                    <article class="hero-value">
+                        <i class="fa-solid fa-handshake"></i>
+                        <div class="hero-value-text">
+                            <h5>Integrity</h5>
+                            <p>High standard ethical conduct</p>
+                        </div>
+                    </article>
+                    <article class="hero-value">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <div class="hero-value-text">
+                            <h5>Client-Centered</h5>
+                            <p>Our clients comes first</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-panel">
+                    <div class="hero-image-panel-inner">
+                        <div class="hero-form-card">
+                            <div class="hero-form-header">
+                                <span class="section-label">Free Case Evaluation</span>
+                                <div class="section-divider"></div>
+                            </div>
+                            <form class="hero-case-form">
+                                <div class="form-group">
+                                    <input type="text" id="hero-name" placeholder="Full Name" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="hero-phone" placeholder="+254 ..." required />
+                                </div>
+                                <div class="form-group">
+                                    <select id="hero-area" required>
+                                        <option value="">Area of Law</option>
+                                        <option>Corporate &amp; Commercial</option>
+                                        <option>Civil Litigation</option>
+                                        <option>Criminal Defense</option>
+                                        <option>Family &amp; Matrimonial</option>
+                                        <option>Property &amp; Real Estate</option>
+                                        <option>Employment &amp; Labour</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="hero-message" rows="3" placeholder="Brief Case Summary"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary hero-submit">
+                                    Get Free Consultation
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">What We Do</span>
+                <span class="section-divider"></span>
+                <h2 class="section-title">
+                    Our Practice <span class="highlight">Areas</span>
+                </h2>
+                <p class="section-desc">
+                    From corporate advisory to family law, our expertise spans the
+                    full spectrum of Kenyan legal practice.
+                </p>
+            </div>
+            <div class="services-carousel">
+                <div class="services-carousel__nav services-carousel__nav--left">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+
+                <div class="services-carousel__track">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-building"></i></div>
+                        <h3>Corporate &amp; Commercial</h3>
+                        <p>M&amp;A, contracts, compliance, and business structuring for enterprises of all sizes.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Civil Litigation</h3>
+                        <p>Expert representation in disputes, arbitration, and high-court proceedings.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fa-solid fa-gavel"></i></div>
+                        <h3>Criminal Defense</h3>
+                        <p>Aggressive and ethical defense for individuals and entities facing criminal charges.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-people-arrows"></i></div>
+                        <h3>Family &amp; Matrimonial</h3>
+                        <p>Divorce, custody, succession, and family mediation with compassion and clarity.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-landmark"></i></div>
+                        <h3>Property &amp; Real Estate</h3>
+                        <p>Conveyancing, land disputes, leases, and property development law.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fa-solid fa-file-signature"></i></div>
+                        <h3>Employment &amp; Labour</h3>
+                        <p>Workplace disputes, contracts, and compliance with Kenyan labour laws.</p>
+                        <a class="learn-more" href="#contact">
+                            <span>Learn more</span>
+                            <span class="learn-more-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services-carousel__nav services-carousel__nav--right">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hero-stats">
+        <div class="stat">
+            <i class="fas fa-award"></i>
+            <div>
+                <h3>15<span>+</span></h3>
+                <p>Years of Excellence</p>
+            </div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-users"></i>
+            <div>
+                <h3><span>+</span>2500</h3>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-gavel"></i>
+            <div>
+                <h3><span>+</span>1200</h3>
+                <p>Cases Won</p>
+            </div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-chart-line"></i>
+            <div>
+                <h3>97<span>%</span></h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-user-friends"></i>
+            <div>
+                <h3><span>+</span>50</h3>
+                <p>Expert Attorneys</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT (with image) ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Law firm office" />
+                </div>
+                <div class="about-text">
+                    <span class="section-label">About Us</span>
+                    <span class="section-divider"></span>
+                    <h2 class="section-title">
+                        Advocates You Can <span class="highlight">Rely On</span>
+                    </h2>
+                    <p>
+                        Founded in Nakuru, J. A. Simiyu &amp; Co. has grown into
+                        one of Kenya's most respected law firms. Our team of seasoned
+                        advocates brings decades of combined experience across
+                        commercial, civil, and criminal law.
+                    </p>
+                    <p>
+                        We are driven by a simple philosophy: every client deserves
+                        passionate representation and clear, honest advice. From
+                        high-stakes corporate litigation to personal legal matters,
+                        we stand with you every step of the way.
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> 100% Client Confidentiality</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent Fee Structure</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 Client Support</li>
+                        <li><i class="fas fa-check-circle"></i> Courtroom Excellence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ATTORNEYS ===== -->
+    <section class="attorneys" id="attorneys">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Our Team</span>
+                <span class="section-divider"></span>
+                <h2 class="section-title">
+                    Meet Your <span class="highlight">Advocates</span>
+                </h2>
+                <p class="section-desc">
+                    Each partner brings a wealth of knowledge and a track record of success in their respective fields.
+                </p>
+            </div>
+            <div class="attorneys-grid">
+                <article class="attorney-card">
+                    <div class="attorney-photo">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bc0cdd6dad92?auto=format&fit=crop&w=400&q=80" alt="John A. Simiyu" />
+                    </div>
+                    <div class="attorney-info">
+                        <h4>John A. Simiyu</h4>
+                        <div class="role">Managing Partner</div>
+                        <p class="attorney-position">Commercial &amp; Corporate Law</p>
+                        <div class="attorney-description">
+                            Leads complex commercial strategy, governance, and strategic advisory matters.
+                        </div>
+                        <div class="attorney-social">
+                            <a class="linkedin-icon" href="https://www.linkedin.com/in/john-simiyu" target="_blank" aria-label="John A. Simiyu LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="email-icon" href="mailto:john.simiyu@jasimiyu.co.ke" aria-label="Email John A. Simiyu">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="attorney-card">
+                    <div class="attorney-photo">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=400&q=80" alt="Wanjiru Kariuki" />
+                    </div>
+                    <div class="attorney-info">
+                        <h4>Wanjiru Kariuki</h4>
+                        <div class="role">Senior Partner</div>
+                        <p class="attorney-position">Civil Litigation &amp; Arbitration</p>
+                        <div class="attorney-description">
+                            Advises on commercial disputes, arbitration strategy, and client-first negotiations.
+                        </div>
+                        <div class="attorney-social">
+                            <a class="linkedin-icon" href="https://www.linkedin.com/in/wanjirukariuki" target="_blank" aria-label="Wanjiru Kariuki LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="email-icon" href="mailto:wanjiru.kariuki@jasimiyu.co.ke" aria-label="Email Wanjiru Kariuki">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="attorney-card">
+                    <div class="attorney-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Samuel Ochieng" />
+                    </div>
+                    <div class="attorney-info">
+                        <h4>Samuel Ochieng</h4>
+                        <div class="role">Partner</div>
+                        <p class="attorney-position">Criminal Defense &amp; Human Rights</p>
+                        <div class="attorney-description">
+                            Represents clients across criminal defense, rights advocacy, and urgent court response.
+                        </div>
+                        <div class="attorney-social">
+                            <a class="linkedin-icon" href="https://www.linkedin.com/in/samuel-ochieng" target="_blank" aria-label="Samuel Ochieng LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="email-icon" href="mailto:samuel.ochieng@jasimiyu.co.ke" aria-label="Email Samuel Ochieng">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="attorney-card">
+                    <div class="attorney-photo">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Faith Njoroge" />
+                    </div>
+                    <div class="attorney-info">
+                        <h4>Faith Njoroge</h4>
+                        <div class="role">Partner</div>
+                        <p class="attorney-position">Family &amp; Property Law</p>
+                        <div class="attorney-description">
+                            Supports estate planning, property disputes, family mediation, and succession matters.
+                        </div>
+                        <div class="attorney-social">
+                            <a class="linkedin-icon" href="https://www.linkedin.com/in/faith-njoroge" target="_blank" aria-label="Faith Njoroge LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="email-icon" href="mailto:faith.njoroge@jasimiyu.co.ke" aria-label="Email Faith Njoroge">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label" style="color: var(--secondary-light);">Testimonials</span>
+                <h2 class="section-title">
+                    What Our <span class="highlight">Clients Say</span>
+                </h2>
+                <p class="section-desc" style="color: rgba(255,255,255,0.6);">
+                    Real feedback from the people and businesses we've represented across Kenya.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>
+                        “J. A. Simiyu &amp; Co. handled our complex merger with precision and care. Their local
+                        knowledge was invaluable.”
+                    </blockquote>
+                    <div class="client">
+                        <div class="initials">DO</div>
+                        <div>
+                            <div class="name">David Omondi</div>
+                            <div class="title">CEO, Lakeview Holdings</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>
+                        “They defended me in a challenging case and won. I felt heard, supported, and well-represented.”
+                    </blockquote>
+                    <div class="client">
+                        <div class="initials">SM</div>
+                        <div>
+                            <div class="name">Sofia Mwangi</div>
+                            <div class="title">Entrepreneur, Nairobi</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>
+                        “Professional, responsive, and truly caring. They resolved our family matter with grace and
+                        expertise.”
+                    </blockquote>
+                    <div class="client">
+                        <div class="initials">RN</div>
+                        <div>
+                            <div class="name">Ruth Ndegwa</div>
+                            <div class="title">Client, Family Law</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT (simplified) ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <span class="section-label">Get in Touch</span>
+                <span class="section-divider"></span>
+                <h3>Let’s Discuss Your Case</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell us about your matter…" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER SECTION ===== -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <h2>Stay <span class="highlight" style="color: var(--secondary);">Informed</span></h2>
+                <p>Subscribe to our newsletter for legal insights, firm news, and updates on Kenyan law.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required />
+                    <button type="submit" class="btn">Subscribe <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (with contact info) ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <i class="fas fa-scale-balanced"></i>
+                        J. A. Simiyu <span>&amp; Co.</span>
+                    </a>
+                    <p style="margin-top: 12px;">
+                        The best way to defend yourself is to attack.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="detail">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <div class="text">Nakuru, Kenya</div>
+                            <div class="sub">Gate House Building, 5th Floor room 512</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="text">+254 700 123 456</div>
+                            <div class="sub">Mon – Fri, 8:00 AM – 6:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <a href="mailto:simiyuadvocate@yahoo.com" class="text">simiyuadvocate@yahoo.com</a>
+                            <div class="sub">We reply within 24 hours</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="#about" style="transition: var(--transition);">About Us</a></li>
+                        <li><a href="#services" style="transition: var(--transition);">Our Services</a></li>
+                        <li><a href="#attorneys" style="transition: var(--transition);">Our Team</a></li>
+                        <li><a href="#contact" style="transition: var(--transition);">Contact</a></li>
+                        <li><a href="#newsletter" style="transition: var(--transition);">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 J. A. Simiyu &amp; Co. Advocates. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--secondary);"></i> in Nakuru</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
