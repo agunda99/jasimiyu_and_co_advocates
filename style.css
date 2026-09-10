@@ -1765,6 +1765,11 @@ section {
         background-image: none;
         background: var(--primary);
         height: auto;
+        padding-bottom: 0;
+    }
+    .hero .container {
+        padding-bottom: 0;
+
     }
     .hero-content{
         padding-top: 80px;
@@ -1785,9 +1790,16 @@ section {
     .hero-image-panel::before {
         display: none;
     }
+    .hero-image-panel,
+    .hero-visual{
+        padding-bottom: 0;
+    }
 .hero-image-panel-inner{
+    width: 100%;
     padding: 0;
     margin: 0;
+    position: absolute;
+    top: -15%;
 }
     .hero-value {
         min-height: 74px;
@@ -1919,6 +1931,7 @@ section {
         min-height: auto;
         scroll-snap-type: none;
     }
+    
 
     .services-carousel__track .service-card {
         flex-basis: auto;
