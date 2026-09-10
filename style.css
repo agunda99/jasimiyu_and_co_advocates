@@ -1728,6 +1728,35 @@ section {
             }
         } */
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-carousel {
+        display: block;
+        overflow: visible;
+    }
+
+    .services-carousel__nav {
+        display: none;
+    }
+
+    .services-carousel__track {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 16px;
+        width: 100%;
+        overflow: visible;
+        flex-wrap: nowrap;
+    }
+
+    .services-carousel__track .service-card {
+        flex-basis: auto;
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+        min-height: 210px;
+        padding: 20px 18px;
+    }
+}
+
 @media (max-width: 768px) {
     *{
         max-width: 100%;
@@ -1869,20 +1898,35 @@ section {
 
     .services-carousel {
         max-width: 100%;
-        overflow: hidden;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .services-carousel__nav {
+        display: none;
     }
 
     .services-carousel__track {
+        display: flex;
+        flex-direction: column;
         width: 100%;
         padding: 8px 2px 14px;
+        overflow-x: hidden;
+        overflow-y: visible;
+        min-height: auto;
+        scroll-snap-type: none;
     }
 
     .services-carousel__track .service-card {
-        flex-basis: calc((100vw - 120px) / 3);
-        min-width: calc((100vw - 120px) / 3);
-        max-width: calc((100vw - 120px) / 3);
+        flex-basis: auto;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
         padding: 16px 12px;
-        min-height: 240px;
+        min-height: 180px;
     }
 
     .services-carousel__track .service-card h3 {
