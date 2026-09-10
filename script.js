@@ -63,16 +63,17 @@ if (heroStatsTrack) {
             return sum + stat.getBoundingClientRect().width;
         }, 0) + gap * Math.max(stats.length - 1, 0);
 
-        let start = 0;
+        let offset = 0;
         const speed = 1.2;
 
         function tick() {
-            start += speed;
-            if (start >= originalWidth) {
-                start = 0;
+            offset -= speed;
+
+            if (Math.abs(offset) >= originalWidth) {
+                offset = 0;
             }
 
-            heroStatsTrack.style.transform = `translateX(${-start}px)`;
+            heroStatsTrack.style.transform = `translateX(${offset}px)`;
             requestAnimationFrame(tick);
         }
 
