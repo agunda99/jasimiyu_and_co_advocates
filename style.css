@@ -1743,6 +1743,9 @@ section {
         } */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        font-size: 1rem;
+    }
     .hero-values-heading {
         display: none;
     }
@@ -1778,6 +1781,16 @@ section {
 @media (max-width: 768px) {
     *{
         max-width: 100%;
+    }
+
+    .logo {
+        font-size: 1rem;
+        initial-letter: 0.3px;
+        gap: 8px;
+    }
+    .logo-text{
+        min-width: none;
+        line-height: 0.8;
     }
 
     .hero-values-heading {
@@ -2038,7 +2051,10 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
+    .logo-text{
+        display: none;
+    }
     .hero-values {
         display: none;
     }
