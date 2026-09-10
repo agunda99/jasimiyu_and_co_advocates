@@ -1817,6 +1817,12 @@ section {
         margin-bottom: 8px;
     }
 
+    .hero-values-heading,
+    .hero-value{
+        display: none;
+
+    }
+
     .hero-image-panel::after,
     .hero-image-panel::before {
         display: none;
