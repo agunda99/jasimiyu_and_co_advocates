@@ -1743,6 +1743,10 @@ section {
         } */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+    .hero-values-heading {
+        display: none;
+    }
+
     .services-carousel {
         display: block;
         overflow: visible;
@@ -1776,12 +1780,12 @@ section {
         max-width: 100%;
     }
 
-    .hero-values {
+    .hero-values-heading {
         display: none;
     }
 
-    .hero-values-heading {
-        display: block;
+    .hero-values {
+        display: none;
     }
 
     .hero {
