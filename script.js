@@ -47,6 +47,39 @@ if (header) {
     });
 }
 
+// ---- HERO STATS MARQUEE DUPLICATION AND SLIDE ----
+const heroStatsTrack = document.querySelector('.hero-stats-track');
+if (heroStatsTrack) {
+    const stats = Array.from(heroStatsTrack.children);
+    if (stats.length) {
+        stats.forEach(stat => {
+            const clone = stat.cloneNode(true);
+            heroStatsTrack.appendChild(clone);
+        });
+
+        const style = window.getComputedStyle(heroStatsTrack);
+        const gap = parseFloat(style.gap || '0') || 0;
+        const originalWidth = stats.reduce((sum, stat) => {
+            return sum + stat.getBoundingClientRect().width;
+        }, 0) + gap * Math.max(stats.length - 1, 0);
+
+        let start = 0;
+        const speed = 1.2;
+
+        function tick() {
+            start += speed;
+            if (start >= originalWidth) {
+                start = 0;
+            }
+
+            heroStatsTrack.style.transform = `translateX(${-start}px)`;
+            requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+    }
+}
+
 // ---- CAROUSEL SCROLL EFFECT ----
 const carouselTrack = document.querySelector(".services-carousel__track");
 const carouselLeft = document.querySelector(".services-carousel__nav--left");
