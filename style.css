@@ -26,6 +26,19 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-heading: 'Playfair Display', 'Inter', serif;
+    --font-heading-alt: 'Times New Roman', 'Georgia', serif;
+    --font-size-base: 16px;
+    --font-size-xs: 0.72rem;
+    --font-size-sm: 0.82rem;
+    --font-size-md: 0.95rem;
+    --font-size-lg: 1.05rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.6rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: clamp(2.2rem, 3vw, 2.8rem);
+    --font-size-hero: clamp(2.4rem, 4vw, 3.8rem);
+    --line-height-body: 1.6;
+    --line-height-heading: 1.2;
 }
 
 html {
@@ -34,9 +47,10 @@ html {
 
 body {
     font-family: var(--font-body);
+    font-size: var(--font-size-base);
     background: var(--bg-light);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: var(--line-height-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -85,7 +99,7 @@ img {
 }
 
 .loader-icon {
-    font-size: 4rem;
+    font-size: var(--font-size-hero);
     height: 96px;
     width: 96px;
     color: var(--secondary);
@@ -119,7 +133,7 @@ img {
     font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
 }
 
 @keyframes pulse {
@@ -268,8 +282,8 @@ img {
 }
 
 .logo-text p:first-child {
-    font-family: centuryschoolbook, var(--font-heading);
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
     font-weight: 800;
     color: var(--secondary);
     letter-spacing: 0.1px;
@@ -277,8 +291,8 @@ img {
 }
 
 .logo-text p:last-child {
-    font-family: centurygothic, var(--font-heading);
-    font-size: 0.8rem;
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
     font-weight: normal;
     color: #fff;
     letter-spacing: 5px;
@@ -356,7 +370,7 @@ img {
 .nav-links a {
     color: rgba(255, 255, 255, 0.75);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
     transition: var(--transition);
     position: relative;
 }
@@ -418,6 +432,47 @@ img {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
     -webkit-transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== TYPOGRAPHY HELPERS ===== */
+.section-label-light {
+    color: var(--secondary-light);
+}
+
+.section-desc-light {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-highlight {
+    color: var(--secondary);
+}
+
+.footer-intro {
+    margin-top: 12px;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quick-links a {
+    transition: var(--transition);
+}
+
+.footer-heart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-heart i {
+    color: var(--secondary);
+}
+
+.footer-grid .footer-col {
+    min-width: 0;
 }
 
 /* ===== HERO ===== */
@@ -484,8 +539,8 @@ img {
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 3.6rem;
-    line-height: 1.12;
+    font-size: var(--font-size-hero);
+    line-height: var(--line-height-heading);
     color: #fff;
     margin-bottom: 12px;
     letter-spacing: -1px;
@@ -497,11 +552,11 @@ img {
 }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     color: rgba(255, 255, 255, 0.75);
     max-width: 500px;
     margin-bottom: 36px;
-    line-height: 1.35;
+    line-height: var(--line-height-body);
 }
 
 /* .hero-content .magazine-style::first-letter { */
@@ -537,7 +592,7 @@ img {
 }
 
 .hero-values-heading .section-label {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     letter-spacing: 1.4px;
     color: var(--secondary);
     margin-bottom: 0;
@@ -583,14 +638,14 @@ img {
 
 .hero-value-text h5 {
     font-family: var(--font-heading);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: #fff;
     line-height: 1.16;
     margin: 0 0 8px;
 }
 
 .hero-value-text p {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     color: rgba(255, 255, 255, 0.72);
     line-height: 1.4;
     margin: 0;
@@ -689,7 +744,7 @@ img {
     color: #fff;
     padding: 12px 14px;
     font-family: var(--font-body);
-    font-size: 0.6rem;
+    font-size: var(--font-size-xs);
 }
 
 .hero-case-form input,
@@ -728,7 +783,7 @@ img {
 .hero-submit {
     width: 100%;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     justify-content: center;
     background: var(--secondary);
     color: var(--primary);
@@ -750,7 +805,7 @@ section {
 
 .section-label {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -768,8 +823,8 @@ section {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
-    line-height: 1.2;
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-heading);
     margin-bottom: 16px;
     color: var(--primary);
 }
@@ -780,7 +835,7 @@ section {
 }
 
 .section-desc {
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     color: var(--text-muted);
     max-width: 600px;
     line-height: 1.8;
@@ -883,15 +938,15 @@ section {
 }
 
 .services-carousel__track .service-card h3 {
-    font-family: var(--serif, "Playfair Display", serif);
-    font-size: 23px;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
     line-height: 1.35;
     color: var(--text, #1b1c1e);
     margin-bottom: 10px;
 }
 
 .services-carousel__track .service-card p {
-    font-size: 15px;
+    font-size: var(--font-size-md);
     color: var(--muted, #5d6066);
     line-height: 1.8;
 }
@@ -1041,7 +1096,7 @@ section {
 }
 
 .service-card h3 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     margin-bottom: 10px;
     color: var(--primary);
@@ -1049,7 +1104,7 @@ section {
 
 .service-card p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
     line-height: 1.7;
 }
 
@@ -1089,14 +1144,14 @@ section {
 }
 
 .stat h3 {
-    font-size: 1.2rem;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--bg-light);
 }
 
 .stat p {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
 }
 
 /* 
@@ -1198,7 +1253,7 @@ section {
     color: var(--text-muted);
     margin-bottom: 18px;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: var(--font-size-md);
 }
 
 .about-text p:last-child {
@@ -1275,12 +1330,22 @@ section {
     box-shadow: 0 0 0 5px rgba(201, 168, 76, 0.08);
     overflow: hidden;
     margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.attorney-photo img {
+.attorney-initials {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-light);
+    letter-spacing: 0.04em;
 }
 
 .attorney-info {
@@ -1290,7 +1355,7 @@ section {
 }
 
 .attorney-card h4 {
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--primary);
 }
@@ -1298,7 +1363,7 @@ section {
 .attorney-card .role {
     color: var(--secondary);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
     margin: 8px 0 10px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1306,7 +1371,7 @@ section {
 
 .attorney-position {
     color: var(--text-muted);
-    font-size: 0.92rem;
+    font-size: var(--font-size-sm);
     font-weight: 600;
     line-height: 1.6;
     margin-bottom: 12px;
@@ -1314,7 +1379,7 @@ section {
 
 .attorney-description {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: var(--font-size-sm);
     line-height: 1.7;
     min-height: 72px;
 }
@@ -1451,7 +1516,7 @@ section {
 
 .contact-wrapper h3 {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: var(--font-size-3xl);
     color: var(--primary);
     margin-bottom: 12px;
 }
@@ -1465,7 +1530,7 @@ section {
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
     transition: var(--transition);
     background: #fff;
     color: var(--text-dark);
@@ -1516,7 +1581,7 @@ section {
 
 .newsletter-wrapper h2 {
     font-family: var(--font-heading);
-    font-size: 2.4rem;
+    font-size: var(--font-size-3xl);
     margin-bottom: 8px;
 }
 
@@ -1587,11 +1652,11 @@ section {
 
 .footer-col p {
     line-height: 1.8;
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
 }
 
 .footer-col .logo {
-    font-size: 1.4rem;
+    font-size: var(--font-size-xl);
     margin-bottom: 12px;
     display: inline-flex;
 }
@@ -1710,7 +1775,7 @@ section {
     }
 
     .attorneys-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(210px, 1fr));
     }
 
     .testimonials-grid {
@@ -2030,7 +2095,7 @@ section {
     }
 
     .attorneys-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .testimonials-grid {
@@ -2079,6 +2144,94 @@ section {
     }
 }
 
+@media (max-width: 280px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-content p {
+        font-size: 0.82rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .attorneys-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attorney-card {
+        padding: 16px 12px;
+    }
+
+    .attorney-photo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .attorney-initials {
+        font-size: 1.4rem;
+    }
+
+    .contact-wrapper {
+        padding: 24px 12px;
+    }
+
+    .footer-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 200px) {
+    body {
+        min-width: 200px;
+    }
+
+    .container {
+        padding: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .hero-actions,
+    .newsletter-form,
+    .contact-form .form-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn,
+    .newsletter-form .btn,
+    .contact-form .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .services-carousel__track .service-card {
+        padding: 14px 10px;
+    }
+
+    .attorneys-grid,
+    .testimonials-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col:last-child {
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 400px) {
     * {
         max-width: 100%;
@@ -2086,7 +2239,7 @@ section {
     }
 
     .about-image {
-        width: 100%;
+        width: 99%;
         min-height: 260px;
         max-height: 280px;
         overflow: hidden;
@@ -2099,6 +2252,11 @@ section {
         max-height: 280px;
         object-fit: cover;
         object-position: center;
+    }
+
+    .about-features{
+        display: flex;
+        flex-direction: column;
     }
 
     .logo-text {
